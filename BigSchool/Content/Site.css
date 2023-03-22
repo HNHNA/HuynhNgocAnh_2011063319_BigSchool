@@ -3,6 +3,7 @@
     padding-bottom: 20px;
 }
 
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -28,3 +29,35 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
+.navbar-inverse {
+    background-color: #d41d50;
+    border-color: #d41d50;
+}
+.navbar-inverse .navbar-nav >li >a{
+    color:black;
+}
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+.course{
+    list-style:none;
+}
+.course >li {
+    position:   relative;
+    margin-bottom:  30px;
+}
+.course > li .date{
+    text-align: center;
+    background-color:   #555;
+    color: white;
+    width:  60px;
+    border-radius: 8px;
+}
+.course > li .details{
+    position: absolute;
+    top:    0;
+    left:   70px;
+} 
+
+    
+
