@@ -1,10 +1,13 @@
 ﻿@model BigSchool.ViewModels.CoursesViewModel
 
 @{
-    ViewBag.Title = "Home Page";
-
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Content/stype.css" rel="stylesheet" />
+
+<h2>Attending</h2>
+
 <div class="row">
     <ul class="course">
         @foreach (var course in Model.UpcomingCourse)
@@ -15,11 +18,11 @@
                     <div class="month">@course.DateTime.ToString("MM")</div>
                     <div class="day">@course.DateTime.ToString("dd")</div>
                 </div>
-                    
+
                 <div class="details">
                     <span class="lecturer">
                         @course.Lecturer.Name
-                        @if(Model.ShowAction)
+                        @if (Model.ShowAction)
                         {
                             <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                         }
@@ -27,9 +30,9 @@
                     <br />
                     <span class="category">
                         @course.Category.Name
-                        @if(Model.ShowAction)
+                        @if (Model.ShowAction)
                         {
-                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                            <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
 
                         }
                     </span>
@@ -67,8 +70,8 @@
 
                 alert("Something failed!");
             });
-                     });
-                });
+                                                     });
+                                                });
         </script>
     }
 </div>
