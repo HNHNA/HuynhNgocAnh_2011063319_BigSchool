@@ -1,0 +1,20 @@
+﻿@model BigSchool.ViewModels.CoursesViewModel
+@{
+    ViewBag.Title = "Following";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Following</h2>
+
+<ul class="followers">
+    @foreach (var course in Model.UpcommingFollowings)
+    {
+        <li class="followers-row">
+            <div>
+                <span class="followers-text">
+                    @course.Name
+                </span>
+            </div>
+        </li>
+    }
+</ul>
